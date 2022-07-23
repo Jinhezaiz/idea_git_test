@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <title>测试</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>姓</td>
+        <td>位置</td>
+        <td>战队</td>
+        <td>韩服分数</td>
+        <td>最近上线时间</td>
+    </tr>
+    </thead>
+
+   <tbody>
+   <tr th:each="user : ${user}">
+       <td th:text="${user.name}"></td>
+       <td th:text="${user.location}"></td>
+       <td th:text="${user.team}"></td>
+       <td th:text="${user.grade}"></td>
+       <td th:text="${user.time}"></td>
+   </tr>
+   </tbody>
+
+</table>
+
+</body>
+</html>
